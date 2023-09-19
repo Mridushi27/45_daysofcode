@@ -1,5 +1,6 @@
 # 45_daysofcode
 My first repository 
+#code in python 
 
 water_drank = int(input("enter amount of water chef drank today (in ml):"))
 if water_drank<2000:
