@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y);
+
+        // Calculate the minimum number of chairs Chef must buy
+        int extra_chairs = X - Y;
+        
+        if (extra_chairs < 0) {
+            extra_chairs = 0; // Chef already has enough chairs
+        }
+
+        printf("%d\n", extra_chairs);
+    }
+
+    return 0;
+}
