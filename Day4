@@ -1,0 +1,15 @@
+# Function to calculate the total amount Chef made for each test case
+def calculate_total_amount(x, y):
+    if y <= x:
+        return y  # Chef gets 1 rupee for each chocolate sold
+    else:
+        return x + (y - x) * 2  # Chef gets x rupees for daily goal chocolates and 2 rupees for each extra chocolate
+
+# Input the number of test cases
+t = int(input())
+
+# Iterate through each test case
+for _ in range(t):
+    x, y = map(int, input().split())
+    total_amount = calculate_total_amount(x, y)
+    print(total_amount)
