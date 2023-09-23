@@ -1,0 +1,18 @@
+# Function to calculate the minimum number of cars required
+def minimum_cars_required(N):
+    # Each car can accommodate 4 people
+    # Calculate the number of cars needed to accommodate N friends
+    cars_needed = (N + 3) // 4
+    return cars_needed
+
+# Input the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Input the number of friends for this test case
+    N = int(input())
+    
+    # Calculate and print the minimum number of cars required
+    cars_required = minimum_cars_required(N)
+    print(cars_required)
