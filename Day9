@@ -1,0 +1,13 @@
+# Input the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    # Input the amount Chef has and the cost of one chocolate
+    X, Y = map(int, input().split())
+    
+    # Calculate the maximum number of chocolates Chef can buy
+    max_chocolates = X // Y
+    
+    # Output the result for this test case
+    print(max_chocolates)
