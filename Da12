@@ -1,0 +1,16 @@
+# Read the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    A, B, X, Y, Z = map(int, input().split())
+
+    # Calculate the time it takes for the bullet to reach the goomba
+    time_to_reach = Y / X
+
+    # Check if Mario needs to wait before shooting
+    if time_to_reach >= Z:
+        print(0)
+    else:
+        wait_time = Z - time_to_reach
+        print(int(wait_time))
