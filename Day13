@@ -1,0 +1,16 @@
+# Read the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    A, B, X, Y = map(int, input().split())
+
+    # Calculate the total power needed and the total power available
+    needed_power = A * B
+    available_power = X * Y
+
+    # Check if the project satisfies the minimum requirements for funding
+    if available_power >= needed_power:
+        print("Yes")
+    else:
+        print("No")
