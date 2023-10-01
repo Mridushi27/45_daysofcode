@@ -1,0 +1,17 @@
+def min_moves_to_reach_stair(X, Y):
+    full_moves = X // Y  # Calculate full moves climbing Y steps at a time
+    remainder = X % Y    # Calculate the remaining steps
+
+    # If there are remaining steps, add one more move for climbing them one step at a time
+    if remainder > 0:
+        full_moves += 1
+
+    return full_moves
+
+# Input the number of test cases
+T = int(input())
+
+for _ in range(T):
+    X, Y = map(int, input().split())
+    result = min_moves_to_reach_stair(X, Y)
+    print(result)
