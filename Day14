@@ -1,0 +1,19 @@
+import math
+
+def min_operations_to_flip_cards(T, test_cases):
+    results = []
+    
+    for i in range(T):
+        N, X = test_cases[i]
+        absolute_diff = abs(X - (N - X))
+        min_operations = math.ceil(absolute_diff / 2)
+        results.append(min_operations)
+    
+    return results
+
+# Example usage:
+T = 4
+test_cases = [(5, 0), (4, 2), (3, 3), (10, 2)]
+results = min_operations_to_flip_cards(T, test_cases)
+for result in results:
+    print(result)
