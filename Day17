@@ -1,0 +1,13 @@
+# Read the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    # Read the values of N and M
+    N, M = map(int, input().split())
+
+    # Check conditions
+    if N % M != 0 or N % 2 != 0:
+        print("No")
+    else:
+        print("Yes")
