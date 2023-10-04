@@ -1,0 +1,15 @@
+# Function to classify the seat type
+def classify_seat_type(N):
+    if N % 6 == 0 or N % 6 == 1:
+        return "Upper" + (" Single" if N % 6 == 1 else " Double")
+    else:
+        return "Lower" + (" Single" if N % 6 == 3 or N % 6 == 4 else " Double")
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    N = int(input())
+    seat_type = classify_seat_type(N)
+    print(seat_type)
